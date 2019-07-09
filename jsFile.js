@@ -7,8 +7,8 @@ $(document).on("click", "#searchBtn", function(){
     var startYear = $("#startYear").val();
     var endYear = $("#endYear").val();
 
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + keyword + "&fq=pub_year:('" + startYear + "' '" + endYear + "')" +
-"&api-key=aXysCQYqudJS8OQlFpAk1MUcb9V2aLJY";
+    var queryURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + keyword + '&fq=pub_year:("'+ startYear + '" '+ '"' + endYear + '"' + ')' +
+'&api-key=aXysCQYqudJS8OQlFpAk1MUcb9V2aLJY';
 
     console.log(queryURL);
     $.ajax({
